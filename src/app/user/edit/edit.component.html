@@ -1,0 +1,43 @@
+<div class="modal-header">
+  <button type="button" class="close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="card-body" >
+  <h4 class="card-title">Modify Contact</h4>
+  <form [formGroup]="pbcreateform" (ngSubmit)="onupdate(pbcreateform.value)">
+    <div class="form-group">
+      <label for="contact_name">Contact Name</label>
+      <input
+        formControlName="contact_name"
+        type="text"
+        class="form-control"
+        required
+        autofocus
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="contact_no">Contact Number</label>
+      <input
+      value = "lll"
+      autocomplete="off"
+        formControlName="contact_no"
+        type="text"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="form-group m-0">
+      <button
+        type="submit"
+        [disabled]="!pbcreateform.valid"
+        class="btn btn-primary btn-block"
+      >
+        Update
+      </button>
+    </div>
+  </form>
+</div>

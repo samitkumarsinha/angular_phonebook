@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">ContactNo</th>
+      <th scope="col">Modify</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contact of contacts; let i = index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{contact.contact_name}}</td>
+      <td>{{contact.contact_no}}</td>
+      <td><span style="cursor: pointer;" (click) = "open(contact)">Edit</span> | <span style="cursor: pointer; color: red" (click) = "del(contact.id)">Delete</span></td>
+    </tr>
+  </tbody>
+</table>

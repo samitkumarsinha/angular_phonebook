@@ -11,6 +11,6 @@ export class AuthService {
     if (token)
       return true;
     else
-      return false;
+      return false; // redirect here instead of redirecting in guard
   }
 }
